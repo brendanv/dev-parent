@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;display=swap">
+    <link rel="stylesheet" href="css/base.css">
     <title>{{ title }}</title>
   </head>
   <body>
-		<article class="flow">
-			{{ content | safe }}
-		</article>
+    <article class="flow">
+      <h1>{{ title }}</h1>
+      <p class="lede">{{ lede }}</p>
+      {{ content | safe }}
+    </article>
   </body>
 </html>
