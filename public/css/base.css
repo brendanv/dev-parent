@@ -89,7 +89,7 @@ blockquote {
 }
 
 /* Line lengths */
-article {
+main {
   max-width: 65ch;
   margin-inline: auto;
 }
