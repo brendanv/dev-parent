@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: layouts/post.njk
 title: Lorem ipsum
 lede: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 ---

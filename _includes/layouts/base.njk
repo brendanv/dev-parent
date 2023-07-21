@@ -3,16 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <meta name="generator" content="{{ eleventy.generator }}">
+
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;display=swap">
     <link rel="stylesheet" href="css/base.css">
-    <title>{{ title }} - {{ metadata.title }}</title>
   </head>
   <body>
-    <article class="flow">
-      <h1>{{ title }}</h1>
-      <p class="lede">{{ lede }}</p>
+    <a href="#skip" class="visually-hidden">Skip to main content</a>
+
+    <header>
+      <a href="/" class="home-link">{{ metadata.title }}</a>
+      <nav></nav>
+    </header>
+    <main id="skip">
       {{ content | safe }}
-    </article>
+    </main>
   </body>
 </html>
