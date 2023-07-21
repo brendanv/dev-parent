@@ -7,9 +7,9 @@
     <meta name="description" content="{{ description or metadata.description }}">
     <meta name="generator" content="{{ eleventy.generator }}">
 
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;display=swap">
-    <link rel="stylesheet" href="css/base.css">
+    {%- css %}{% include "public/css/reset.css" %}{% endcss %}
+    {%- css %}{% include "public/css/base.css" %}{% endcss %}
+    <style>{% getBundle "css" %}</style>
   </head>
   <body>
     <a href="#skip" class="visually-hidden">Skip to main content</a>
