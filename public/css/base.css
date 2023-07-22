@@ -32,7 +32,6 @@
 body {
   background: var(--color-background);
   color: var(--color-text);
-  padding: 2em;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: var(--size-step-0);
   line-height: 1.7;
@@ -98,6 +97,7 @@ blockquote {
 
 /* Line lengths */
 main {
+  padding: 2em;
   max-width: 65ch;
   margin-inline: auto;
 }
@@ -127,6 +127,32 @@ h3 {
   --flow-space: 2em;
 }
 
+header {
+  display: flex;
+  gap: 1em .5em;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1em;
+  border-bottom: 1px dashed var(--color-text);
+  max-width: 65ch;
+  margin-inline: auto;
+}
+
+header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.home-link {
+  font-size: 1em; /* 16px /16 */
+  font-weight: 700;
+  margin-right: 2em;
+}
+.home-link:link:not(:hover) {
+  text-decoration: none;
+}
+
+/* Nav */
 .nav {
   display: flex;
   padding: 0;
