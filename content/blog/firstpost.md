@@ -1,5 +1,4 @@
 ---
-layout: layouts/post.njk
 title: First Post
 lede: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 ---
