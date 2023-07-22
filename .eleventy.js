@@ -1,4 +1,5 @@
 const { DateTime } = require("luxon")
+const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
@@ -7,6 +8,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight, {
     preAttributes: { tabindex: 0 }
   });
+  eleventyConfig.addPlugin(pluginNavigation);
 
   eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
