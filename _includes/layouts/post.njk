@@ -3,10 +3,10 @@ layout: layouts/base.njk
 ---
 {%- css %}{% include "node_modules/prismjs/themes/prism-tomorrow.css" %}{% endcss %}
 
-<article class="flow">
+<article class="flow" data-pagefind-body>
   <h1>{{ title }}</h1>
   <p class="lede">{{ lede }}</p>
-  <div class="post-meta">
+  <div class="post-meta" data-pagefind-ignore>
     <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time> ⋅
     {{ content | timeToRead }}
     {% if (tags | length) > 1 %}
@@ -15,7 +15,7 @@ layout: layouts/base.njk
     {% set comma = joiner() %}
     {% for tag in tags -%}
       {% if tag !== 'posts' %}
-        {{ comma() }} <span class="tag">#{{ tag }}</span>
+        {{ comma() }} <span class="tag" data-pagefind-filter="tag">#{{ tag }}</span>
       {% endif %}
     {%- endfor %}
   </div>
