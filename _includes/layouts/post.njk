@@ -6,6 +6,18 @@ layout: layouts/base.njk
 <article class="flow">
   <h1>{{ title }}</h1>
   <p class="lede">{{ lede }}</p>
-  <div class="post-meta">{{ date | readableDate }} ⋅ {{ content | timeToRead }}</div>
+  <div class="post-meta">
+    <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time> ⋅
+    {{ content | timeToRead }}
+    {% if (tags | length) > 1 %}
+     ⋅
+    {% endif %}
+    {% set comma = joiner() %}
+    {% for tag in tags -%}
+      {% if tag !== 'posts' %}
+        {{ comma() }} <span class="tag">#{{ tag }}</span>
+      {% endif %}
+    {%- endfor %}
+  </div>
   {{ content | safe }}
 </article>
