@@ -35,6 +35,12 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: var(--size-step-0);
   line-height: 1.7;
+  --pagefind-ui-text: var(--color-text);
+  --pagefind-ui-tag: var(--color-text);
+  --pagefind-ui-border: var(--color-text);
+  --pagefind-ui-background: var(--color-background);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-font: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 a {
