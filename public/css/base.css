@@ -127,6 +127,11 @@ h3 {
   --flow-space: 2em;
 }
 
+.post-meta {
+  font-size: small;
+  --flow-space: 0.5em;
+}
+
 header {
   display: flex;
   gap: 1em .5em;

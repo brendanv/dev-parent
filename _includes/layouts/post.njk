@@ -6,5 +6,6 @@ layout: layouts/base.njk
 <article class="flow">
   <h1>{{ title }}</h1>
   <p class="lede">{{ lede }}</p>
+  <div class="post-meta">{{ date | readableDate }} ⋅ {{ content | timeToRead }}</div>
   {{ content | safe }}
 </article>
