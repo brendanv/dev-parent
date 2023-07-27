@@ -1,3 +1,4 @@
+const CleanCSS = require("clean-css");
 const { DateTime } = require("luxon")
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
@@ -5,7 +6,16 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginTimeToRead = require('eleventy-plugin-time-to-read');
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPlugin(pluginBundle);
+  eleventyConfig.addPlugin(pluginBundle, {
+    transforms: [
+      async function(content) {
+        if (this.type === "css") {
+          return new CleanCSS({}).minify(content).styles;
+        }
+        return content;
+      }
+    ]
+  });
   eleventyConfig.addPlugin(pluginSyntaxHighlight, {
     preAttributes: { tabindex: 0 }
   });
