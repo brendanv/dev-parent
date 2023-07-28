@@ -15,7 +15,7 @@ layout: layouts/base.njk
     {% set comma = joiner() %}
     {% for tag in tags -%}
       {% if tag !== 'posts' %}
-        {{ comma() }} <span class="tag" data-pagefind-filter="tag">#{{ tag }}</span>
+        {{ comma() }} <a href="/tags/{{ tag | slugify }}" data-pagefind-filter="tag">#{{ tag }}</a>
       {% endif %}
     {%- endfor %}
   </div>
