@@ -6,6 +6,10 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginTimeToRead = require('eleventy-plugin-time-to-read');
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPassthroughCopy({
+    "public/img/favicon": "/"
+  });
+
   eleventyConfig.addPlugin(pluginBundle, {
     transforms: [
       async function(content) {
