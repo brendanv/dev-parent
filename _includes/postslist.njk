@@ -1,9 +1,26 @@
-{%- css %}.postlist { counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }} }{% endcss %}
-<ol reversed class="postlist">
+{%- css %}{% include "public/css/postlist.css" %}{% endcss %}
+<ul reversed class="postlist">
 {% for post in postslist | reverse %}
     <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-        <a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-        <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      {% if post.data.lede %}
+        <p class="lede">
+          {{ post.data.lede }}
+        </p>
+      {% endif %}
+      <div class="post-meta">
+        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time> ⋅
+        {{ post.content | timeToRead }}
+        {% if (post.data.tags | length) > 1 %}
+         ⋅
+        {% endif %}
+        {% set comma = joiner() %}
+        {% for tag in post.data.tags -%}
+          {% if tag !== 'posts' %}
+            {{ comma() }} <a href="/tags/{{ tag | slugify }}" data-pagefind-filter="tag">#{{ tag }}</a>
+          {% endif %}
+        {%- endfor %}
+      </div>
     </li>
 {% endfor %}
-</ol>
+</ul>

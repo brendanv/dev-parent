@@ -1,0 +1,13 @@
+.postlist {
+  list-style: none;
+  padding: 0;
+}
+
+.postlist > li + li {
+  border-top: 1px dashed;
+  padding-top: 2em;
+}
+
+.postlist-item {
+  padding-bottom: 2em;
+}
