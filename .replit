@@ -1,0 +1,7 @@
+run = "npx @11ty/eleventy --serve"
+
+[nix]
+channel = "stable-22_11"
+
+[deployment]
+run = ["sh", "-c", "npx @11ty/eleventy --serve"]
