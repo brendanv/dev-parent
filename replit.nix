@@ -1,5 +1,3 @@
-{ pkgs }: {
-    deps = [
-      pkgs.nodejs
-    ];
+{pkgs}: {
+  deps = [ pkgs.vim ];
 }

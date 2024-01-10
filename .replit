@@ -1,7 +1,9 @@
-run = "npx @11ty/eleventy --serve"
+run = "npm run dev -- -p 8000 --host"
+# run = "npm run preview -- -p 8000 --host"
+modules = ["nodejs-20:v8-20230920-bd784b9"]
 
 [nix]
-channel = "stable-22_11"
+channel = "stable-23_05"
 
 [deployment]
 run = ["sh", "-c", "npx @11ty/eleventy --serve"]
