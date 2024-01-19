@@ -3,6 +3,7 @@ author: Brendan Viscomi
 pubDatetime: 2024-01-10T10:57:00.000Z
 title: Hello, world!
 description: So what exactly is /dev/parent?
+slug: hello-world
 ---
 
 ## So what is /dev/parent all about?
