@@ -23,9 +23,7 @@ To start, come up with a unique topic name. Topics are public but as far as I kn
 Download the app for your mobile platform of choice and subscribe to your new topic. Now you should be able to send a quick notification to your device with a quick curl command:
 
 ```
-curl \
-  -d “Testing!” \
-  ntfy.sh/yourtopic
+curl -d “Testing!” ntfy.sh/yourtopic
 ```
 
 ## Sending notifications from Shortcuts
