@@ -8,8 +8,6 @@ tags:
   - shortcuts
 ---
 
-# Custom shared notifications with Shortcuts and ntfy.sh
-
 Sometimes daily life can get hectic and it feels like you and your partner are dealing with two separate mountains of things to do. On those days the small, unowned chores can fall down the priority list. How do you know if your partner already completed a task if you’re not together at the time and don’t want to bother them?
 
 For stuff like this, I’ve found it useful to set up a small set of custom notifications that my partner and I can send to each other. We trigger the notification via Apple Shortcuts and both of us receive a matching notification on our phones. It ends up being an unobtrusive and passive way for us to let each other know that some small thing has been done.
