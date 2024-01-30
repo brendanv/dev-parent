@@ -37,11 +37,11 @@ Create a new Shortcut for the notification you’d like to send. The key ingredi
   - title: (whatever you want)
   - message: (whatever you want)
 
-![shortcuts configuration](@assets/images/2024-01-19_custom_notifications_shortcut.jpeg)
+![shortcuts configuration](@assets/images/2024/01/custom_notifs_part1/shortcut.jpeg)
 
 If you run your shotcut then you should receive a fancy notification on your phone!
 
-![notification view](@assets/images/2024-01-19_custom_notifications_ntfy.jpeg)
+![notification view](@assets/images/2024/01/custom_notifs_part1/ntfy.jpeg)
 
 ## Putting it all together
 
