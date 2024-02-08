@@ -51,4 +51,4 @@ Download the ntfy.sh app and subscribe to the same topic. Now if you run the Sho
 
 Finally, share the Shortcut you created to the other phone (or any other iDevice you want to trigger the notifications). Then you should be able to trigger a notification on both phones using either device!
 
-In part two we’ll make these notifications a bit more fun and make it even easier to trigger these notifications without opening the shortcuts app.
+In [part two](/posts/custom-shared-notifications-shortcuts-ntfy-part-2) we’ll make these notifications a bit more fun and make it even easier to trigger these notifications without opening the shortcuts app.
